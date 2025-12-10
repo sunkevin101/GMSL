@@ -10,6 +10,4 @@ python train.py \
 --pretrain_lr 1e-4 \
 --epochs 10 \
 --lr 5e-4 \
---mask_ratio 0.5 \
---delay_hours 0
-
+--mask_ratio 0.5 
