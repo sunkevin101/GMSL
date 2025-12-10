@@ -9,7 +9,7 @@ def parse_args():
     # Training dataset paths
     parser.add_argument('--cancer_type',
                         default='BRCA',
-                        choices=['UCEC', 'BRCA', 'BLCA', 'LUAD', 'OV', 'GBMLGG'],
+                        choices=['UCEC', 'BRCA', 'BLCA', 'LUAD', 'GBMLGG'],
                         help='cancer type used to delete the patient ID')
     parser.add_argument('--wsi_embedding_folder',
                         default='/home/kevin/SunKevin/CODE/ResNet50_pt/UCEC_pt_512_1024d_90_95_241107',
@@ -23,7 +23,6 @@ def parse_args():
                         type=str,
                         help='genomic type: single modal or multi_modal for all three modalities (mRNA, CNA, Methylation)')
     parser.add_argument('--k_fold', default=5, type=int, help='5-fold cross validation')
-    parser.add_argument('--delay_hours', default=0, type=float, help='run after delay hours')
 
     # checkpoints save path
     parser.add_argument('--work_dir', default='./work_dir/GMSL', help='models weight and log save folder')
@@ -149,3 +148,4 @@ def log_training_params(params, experiment_id):
     logging.info(f"Time ID: {experiment_id}")
     
     logging.info("=" * N_const)
+
