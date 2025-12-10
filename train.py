@@ -24,9 +24,6 @@ warnings.filterwarnings("ignore")
 def main():
     params = parse_args()  # config parameters
 
-    # Run after delay
-    run_after_hours(params.delay_hours)
-
     # Start timing
     start_time = time.time()
 
